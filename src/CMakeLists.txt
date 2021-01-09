@@ -3,6 +3,7 @@ set(LoadImage_HEADER_DIR ${PROJECT_SOURCE_DIR}/include)
 add_library(LoadImage
   loadimage.cpp ${LoadImage_HEADER_DIR}/loadimage.hpp
 )
+target_link_libraries(LoadImage ${OpenCV_LIBS})
 
 add_executable(ShowImage main.cpp)
 target_link_libraries(ShowImage LoadImage)
